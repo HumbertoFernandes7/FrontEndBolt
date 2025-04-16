@@ -1,27 +1,33 @@
-# BoltFront
+# Frontend - Bolt Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+Este é o frontend da aplicação desenvolvida como parte do desafio técnico da Bolt, utilizando Angular na versão 18.1.3.
 
-## Development server
+## Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular 18.1.3  
+- TypeScript  
+- SCSS  
 
-## Code scaffolding
+## Estrutura do Projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funcionalidades
 
-## Build
+### HomeComponent
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Apresenta uma lista com as top 5 usinas.
+- Permite atualizar manualmente os dados das usinas.
+- Utiliza um spinner para feedback visual de carregamento.
+- Exibe modal de erro em caso de falha na requisição.
 
-## Running unit tests
+### UsinaService
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `listaTop5Empresas`: Requisição GET para `${APIURL}/lista/top5`.
+- `atualizaManualment`: Requisição GET para `${APIURL}/importaManualment`.
 
-## Running end-to-end tests
+## Como Rodar o Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Instale as dependências:
+```bash
+npm install
+ng serve
+http://localhost:4200
