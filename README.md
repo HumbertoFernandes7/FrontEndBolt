@@ -8,11 +8,7 @@ Este é o frontend da aplicação desenvolvida como parte do desafio técnico da
 - TypeScript  
 - SCSS  
 
-## Estrutura do Projeto
-
 ## Funcionalidades
-
-### HomeComponent
 
 - Apresenta uma lista com as top 5 usinas.
 - Permite atualizar manualmente os dados das usinas.
