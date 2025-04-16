@@ -1,0 +1,48 @@
+<body>
+    <h1>Top 5 maiores empresas</h1>
+    <div class="acoes">
+      <button (click)="atualizaManualmente()">🔄 Importar dados manualmente (demora)</button>
+    </div>
+    <div class="tabela-container">
+      <table *ngIf="!spinner">
+        <thead>
+          <tr>
+            <th>Nome Emprendimento</th>
+            <th>Potencia Mw</th>
+            <th>UF</th>
+            <th>Fonte</th>
+            <th>Data Operacao</th>
+            <th>Classe Consumo</th>
+            <th>Modalidade Geração</th>
+            <th>Submercado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usina of usinas">
+            <td>{{ usina.nomeEmpreendimento }}</td>
+            <td>{{ usina.potenciaMw }}</td>
+            <td>{{usina.uf}}</td>
+            <td>{{usina.fonte}}</td>
+            <td>{{usina.dataOperacao}}</td>
+            <td>{{usina.classeConsumo}}</td>
+            <td>{{usina.modalidadeGeracao}}</td>
+            <td>{{usina.submercado}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div *ngIf="spinner" class="spinner-container">
+      <div class="spinner"></div>
+      <p>Carregando dados...</p>
+    </div>
+
+    <div class="modal-backdrop" *ngIf="modalErro">
+      <div class="modal">
+        <h2>Erro</h2>
+        <p>{{ mensagemErro }}</p>
+        <button (click)="fecharModalErro()">Fechar</button>
+      </div>
+    </div>
+
+</body>
